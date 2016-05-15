@@ -7,11 +7,6 @@
  * # MainCtrl
  * Controller of the ivdbApp
  */
-angular.module('ivdbApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+ivdb.controller('MainCtrl', ['$scope', 'Video', function ($scope, Video) {
+    $scope.trending = Video.query({category: 'trending'});
+}]);
