@@ -1,0 +1,20 @@
+[
+  {
+    "title": "ng-conf 2016 Conference Day 1",
+    "link": "https://www.youtube.com/watch?v=mAjjI35RcUE",
+    "thumb": "images/ng-conf-day1.jpg",
+    "desc": "ng-conf is a three day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. Developers from across the country will converge on beautiful Salt Lake City, UT to participate in training sessions by the Google Angular team, and other Angular experts. In addition to the invaluable training, ng-conf will deliver a premier conference experience for attendees, providing opportunities to network with other developers, relax at social events, and engage in some of the unique entertainment opportunities available in Utah."
+  },
+  {
+    "title": "ng-conf 2016 Conference Day 2",
+    "link": "https://www.youtube.com/watch?v=bSssb9AmiJU",
+    "thumb": "images/ng-conf-day2.jpg",
+    "desc": "ng-conf is a two day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. 500 to 700 Developers from across the country will converge on beautiful Salt Lake City, UT to participate in training sessions by the Google Angular team, and other Angular experts. In addition to the invaluable training, ng-conf will deliver a premier conference experience for attendees, providing opportunities to network with other developers, relax at social events, and engage in some of the unique entertainment opportunities available in Utah."
+  },
+  {
+    "title": "ng-conf 2016 Conference Day 3",
+    "link": "https://www.youtube.com/watch?v=kJ6LVmQ6z0M",
+    "thumb": "images/ng-conf-day3.jpg",
+    "desc": "ng-conf is a two day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. 500 to 700 Developers from across the country will converge on beautiful Salt Lake City, UT to participate in training sessions by the Google Angular team, and other Angular experts. In addition to the invaluable training, ng-conf will deliver a premier conference experience for attendees, providing opportunities to network with other developers, relax at social events, and engage in some of the unique entertainment opportunities available in Utah."
+  }
+]

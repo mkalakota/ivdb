@@ -1,0 +1,48 @@
+<md-dialog ng-cloak aria-label="Upload Video" class="md-inline-form">
+    <form name="uploadForm">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Upload Video</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="images/icons/close.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label translate>Title</label>
+                        <input ng-model="video.title">
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label translate>Category</label>
+                        <md-select ng-model="video.category">
+                            <md-option ng-repeat="category in categories" value="{{category.name}}">
+                                {{category.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <md-input-container class="md-block">
+                    <label translate>Link</label>
+                    <input ng-model="video.link">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label translate>Thumbnail</label>
+                    <input ng-model="video.thumb">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label translate>Description</label>
+                    <input ng-model="video.desc">
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised" ng-click="cancel()" type="button">Reset</md-button>
+            <md-button class="md-raised md-primary" ng-click="answer()" type="button">Submit</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

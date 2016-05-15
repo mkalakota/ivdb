@@ -1,19 +1,19 @@
-<md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-4dp" md-component-id="categoriesList">
     <md-toolbar md-scroll-shrink>
         <h1 class="md-toolbar-tools">Categories</h1>
     </md-toolbar>
-    <md-list>
-        <md-list-item>
-            <md-button>
-                Funny
+    <md-list ng-click="mc.toggleSidenav()">
+        <md-list-item ng-repeat="category in categories">
+            <md-button ng-click="showVideos(category.name)" translate>
+                {{category.name}}
             </md-button>
         </md-list-item>
     </md-list>
 </md-sidenav>
 <md-content id="content" flex layout-xs="column" layout="row" class="md-padding">
     <div flex-xs flex-gt-xs="50" layout="column" class="full-height">
-        <md-card ng-repeat="video in trending" ng-if="$even">
-            <img src="{{video.thumb}}" alt="Washed Out" class="md-card-image">
+        <md-card ng-repeat="video in videos" ng-if="$even">
+            <img ng-src="{{video.thumb}}" alt="Washed Out" class="md-card-image">
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{video.title}}</span>
@@ -30,8 +30,8 @@
         </md-card>
     </div>
     <div flex-xs flex-gt-xs="50" layout="column" class="full-height">
-        <md-card ng-repeat="video in trending" ng-if="$odd">
-            <img src="{{video.thumb}}" alt="Washed Out" class="md-card-image">
+        <md-card ng-repeat="video in videos" ng-if="$odd">
+            <img ng-src="{{video.thumb}}" alt="Washed Out" class="md-card-image">
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">{{video.title}}</span>

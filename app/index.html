@@ -5,28 +5,40 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="lib/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="lib/angular-material/angular-material.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="ivdbApp" layout="column">
+<body ng-app="ivdbApp" layout="column" ng-controller="MainCtrl as mc">
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <md-toolbar>
-    <h3>Internet Video DataBase</h3>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Show categories" ng-click="mc.toggleSidenav()">
+            <md-icon md-svg-icon="images/icons/hamburger.svg"></md-icon>
+        </md-button>
+        <h2>
+            <span>Internet Video DataBase</span>
+        </h2>
+        <span flex>s</span>
+        <md-button aria-label="Upload video" ng-click="mc.showUploadDialog()">
+            Upload
+        </md-button>
+    </div>
 </md-toolbar>
 
-<div ng-cloak flex layout="row" ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+<div ng-cloak flex layout="row" ng-include="'views/main.html'"></div>
 
 <!--<div class="footer">-->
 <!--<div class="container">-->
@@ -58,6 +70,8 @@
 <script src="lib/angular-messages/angular-messages.js"></script>
 <script src="lib/angular-material/angular-material.js"></script>
 <script src="lib/angular-resource/angular-resource.js"></script>
+<script src="lib/angular-translate/angular-translate.js"></script>
+<script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -66,7 +80,9 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
-<script src="scripts/services/videoResource.js"></script>
+<script src="scripts/controllers/upload.js"></script>
+<script src="scripts/resources/video.js"></script>
+<script src="scripts/resources/category.js"></script>
 <!-- endbuild -->
 </body>
 </html>
